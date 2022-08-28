@@ -1,55 +1,65 @@
-.login {
-  width: 90%;
-  max-width: 40rem;
-  margin: 2rem auto;
-  padding: 2rem;
-}
-
-.control {
-  margin: 1rem 0;
+.cart-item {
   display: flex;
-  align-items: stretch;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #8a2b06;
+  padding: 1rem 0;
+  margin: 1rem 0;
 }
 
-.control label,
-.control input {
-  display: block;
+.cart-item h2 {
+  margin: 0 0 0.5rem 0;
+  color: #363636;
 }
 
-.control label {
+.summary {
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
   font-weight: bold;
-  flex: 1;
-  color: #464646;
-  margin-bottom: 0.5rem;
+  color: #8a2b06;
 }
 
-.control input {
-  flex: 3;
-  font: inherit;
-  padding: 0.35rem 0.35rem;
-  border-radius: 6px;
+.amount {
+  font-weight: bold;
   border: 1px solid #ccc;
-}
-
-.control input:focus {
-  outline: none;
-  border-color: #4f005f;
-  background: #f6dbfc;
-}
-
-.control.invalid input {
-  border-color: red;
-  background: #fbdada;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  color: #363636;
 }
 
 .actions {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
-  .control {
-    align-items: center;
+  .actions {
     flex-direction: row;
   }
+}
+
+.cart-item button {
+  font: inherit;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #8a2b06;
+  border: 1px solid #8a2b06;
+  width: 3rem;
+  text-align: center;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin: 0.25rem;
+}
+
+.cart-item button:hover,
+.cart-item button:active {
+  background-color: #8a2b06;
+  color: white;
 }
